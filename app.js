@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.all('*', (req, res, next) => {
+app.use((req, res, next) => {
   console.log(dateFormat(new Date(), 'yyyy-mm-dd HH:MM:ss') + ' ' + req.method + ' ' + decodeURIComponent(req.originalUrl)+ ' ' + JSON.stringify(req.body));
   next();
 });
