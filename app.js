@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-let dateFormat = require('dateFormat');
+let dateFormat = require('dateformat');
 
 var productsRouter = require('./routes/products');
 
