@@ -25,9 +25,6 @@ app.all('*', (req, res, next) => {
 */
 
 app.use('/products', productsRouter);
-app.use('/healthy', (req, res, next) => {
-  res.status(200).json();
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
