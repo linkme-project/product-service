@@ -23,7 +23,7 @@ app.all('*', (req, res, next) => {
 });
 
 app.use('/products', productsRouter);
-app.use('/', (req, res, next) => {
+app.use('/healthy', (req, res, next) => {
   res.status(200).json();
 });
 
